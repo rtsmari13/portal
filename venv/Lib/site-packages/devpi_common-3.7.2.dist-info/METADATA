@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: devpi-common
+Version: 3.7.2
+Summary: utilities jointly used by devpi-server and devpi-client
+Home-page: https://github.com/devpi/devpi
+Maintainer: Florian Schulze
+Maintainer-email: mail@pyfidelity.com
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+License-File: LICENSE
+Requires-Dist: lazy
+Requires-Dist: packaging (<22)
+Requires-Dist: py (>=1.4.20)
+Requires-Dist: requests (>=2.3.0)
+
+
+This package contains utility functions used by devpi-server and devpi-client.
+
+See http://doc.devpi.net for more information.
+
+
+=========
+Changelog
+=========
+
+
+
+.. towncrier release notes start
+
+3.7.2 (2023-01-24)
+==================
+
+
+
+
+
+Bug Fixes
+---------
+
+- Fix #928: correct default for pre-release matching after switching from ``pkg_resources`` to ``packaging``.
+
+- Fix #949: correct parsing of wheel tags for Python 3.10 and above.
+
+
+3.7.1 (2022-12-16)
+==================
+
+Bug Fixes
+---------
+
+- Fix #939: pin packaging to <22 as it removed the deprecated LegacyVersion.
+
+
+3.7.0 (2022-08-16)
+==================
+
+Features
+--------
+
+- Add ``hash_type`` and ``fragment`` attributes to URL class.
+
+- Replace ``pkg_resources`` usage with ``packaging``.
+
+
+Bug Fixes
+---------
+
+- Fix #895: return content of data-yanked.
+
+- Fixed some cases where name and version weren't split off correctly from filename.
+
+
+3.6.0 (2020-09-13)
+==================
+
+Features
+--------
+
+- Hide password from URL representation.
+
+- Allow replacement of individual netloc parts with URL.replace method.
+
+
+3.5.0 (2020-05-04)
+==================
+
+Features
+--------
+
+- fix #792: support data-yanked attribute in HTMLPage parser.
+
+- Replace "cached_property" with "lazy" package, which uses __dict__ directly for much faster reads.
+
